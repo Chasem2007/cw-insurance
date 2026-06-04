@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Conver &amp; Winchell Insurance | Billings, Montana</title>
   <meta name="description" content="Billings' trusted independent insurance agency since 2003. Personal service for home, auto, RV, boat, renters, and more. Call (406) 652-9610." />
-  <meta name="keywords" content="insurance Billings Montana, auto insurance Billings, home insurance Billings MT, independent insurance agent Montana" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -13,57 +12,40 @@
 </head>
 <body>
 
-  <!-- ==================== NAVIGATION ==================== -->
   <header class="nav" id="nav">
     <div class="container nav__inner">
-      <a href="#home" class="nav__brand">
-        <!-- Shown when scrolled (white nav) -->
-        <img
-          class="nav__logo-img"
-          src="images/logo.jpg"
-          alt="Conver &amp; Winchell Insurance"
-          height="40"
-        />
-        <!-- Shown over dark hero -->
+      <a href="index.html" class="nav__brand">
+        <img class="nav__logo-img" src="images/logo.jpg" alt="Conver &amp; Winchell Insurance" height="36" />
         <div class="nav__wordmark">
           <span class="nav__wordmark-main">Conver &amp; Winchell</span>
           <span class="nav__wordmark-sub">Insurance</span>
         </div>
       </a>
-
-      <nav class="nav__links" id="navLinks" aria-label="Main navigation">
-        <a href="#services">Coverage</a>
-        <a href="#why-us">Why Us</a>
-        <a href="#team">Our Team</a>
-        <a href="#carriers">Carriers</a>
-        <a href="#claims">Claims</a>
-        <a href="#contact" class="nav__quote-btn">Get a Quote</a>
+      <nav class="nav__links" id="navLinks">
+        <a href="coverage.html">Coverage</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="nav__quote-btn">Get a Quote</a>
       </nav>
-
       <button class="nav__hamburger" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- ==================== HERO (two-panel split) ==================== -->
+  <!-- HERO -->
   <section class="hero" id="home">
-
     <div class="hero__left">
       <div class="hero__logo-lockup">
         <span class="hero__logo-main">Conver &amp; Winchell</span>
         <span class="hero__logo-rule"></span>
         <span class="hero__logo-sub">Insurance</span>
       </div>
-
       <div class="hero__eyebrow">Independent Agency &nbsp;·&nbsp; Billings, MT &nbsp;·&nbsp; Est. 2003</div>
       <h1 class="hero__title">Protecting What<br>Matters Most to You</h1>
-      <p class="hero__desc">
-        Personal service from a local agent who truly knows Billings. We shop 11+ carriers to find the right coverage at the right price — for your home, your vehicles, and everything in between.
-      </p>
-
+      <p class="hero__desc">Personal service from a local agent who truly knows Billings. We shop 11+ carriers to find the right coverage at the right price — for your home, your vehicles, and everything in between.</p>
       <div class="hero__ctas">
-        <a href="#contact" class="btn-primary">
+        <a href="contact.html" class="btn-primary">
           <span>Get a Free Quote</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -72,503 +54,141 @@
           (406) 652-9610
         </a>
       </div>
-
       <div class="hero__carriers">
         <span class="hero__carriers-label">Trusted carriers include</span>
         <div class="hero__carrier-list">
-          <span>Progressive</span>
-          <span>Safeco</span>
-          <span>Travelers</span>
-          <span>The Hartford</span>
-          <span>Foremost</span>
-          <span>&amp; more</span>
+          <span>Progressive</span><span>Safeco</span><span>Travelers</span>
+          <span>The Hartford</span><span>Foremost</span><span>&amp; more</span>
         </div>
       </div>
     </div>
-
     <div class="hero__right" aria-hidden="true">
-      <img
-        src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=85"
-        alt="Luxury vehicle"
-        class="hero__car-img"
-        loading="eager"
-      />
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=85" alt="" class="hero__car-img" loading="eager" />
       <div class="hero__right-fade"></div>
     </div>
-
   </section>
 
-  <!-- ==================== STATS ==================== -->
-  <section class="stats" id="stats">
+  <!-- STATS -->
+  <section class="stats">
     <div class="container stats__grid">
-      <div class="stat">
-        <div class="stat__number">20+</div>
-        <div class="stat__label">Years Serving Billings</div>
-      </div>
-      <div class="stat">
-        <div class="stat__number">11+</div>
-        <div class="stat__label">Insurance Carriers</div>
-      </div>
-      <div class="stat">
-        <div class="stat__number">13</div>
-        <div class="stat__label">Coverage Options</div>
-      </div>
-      <div class="stat">
-        <div class="stat__number">24/7</div>
-        <div class="stat__label">Claims Support</div>
-      </div>
+      <div class="stat"><div class="stat__number">20+</div><div class="stat__label">Years Serving Billings</div></div>
+      <div class="stat"><div class="stat__number">11+</div><div class="stat__label">Insurance Carriers</div></div>
+      <div class="stat"><div class="stat__number">13</div><div class="stat__label">Coverage Options</div></div>
+      <div class="stat"><div class="stat__number">24/7</div><div class="stat__label">Claims Support</div></div>
     </div>
   </section>
 
-  <!-- ==================== SERVICES ==================== -->
-  <section class="section services" id="services">
+  <!-- FEATURED COVERAGE -->
+  <section class="section featured-coverage">
     <div class="container">
       <div class="section-header">
         <div class="section-tag">Coverage</div>
-        <h2>Everything Covered,<br>All in One Place</h2>
-        <p>As an independent agency, we shop multiple top-rated carriers to find you the best protection at the best price — for every stage of life.</p>
+        <h2>Protection for Every Part of Your Life</h2>
+        <p>As an independent agency we're not tied to one company — we shop across 11+ top carriers to find the right policy for you.</p>
       </div>
-
-      <div class="services__tabs" role="tablist">
-        <button class="tab active" data-tab="personal" role="tab" aria-selected="true">Personal &amp; Vehicles</button>
-        <button class="tab" data-tab="property" role="tab" aria-selected="false">Home &amp; Property</button>
+      <div class="featured-coverage__grid">
+        <div class="feat-item">
+          <div class="feat-item__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 17H3v-5l2.5-5h11L19 12v5h-2"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/><path d="M3 12h16"/></svg>
+          </div>
+          <div class="feat-item__num">Vehicles</div>
+          <h3>Auto, RV &amp; More</h3>
+          <p>Cars, trucks, motorcycles, RVs, ATVs, boats, snowmobiles, and collector cars — we cover it all.</p>
+          <a href="coverage.html" class="feat-item__link">View vehicle coverage <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="feat-item">
+          <div class="feat-item__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="feat-item__num">Property</div>
+          <h3>Home, Renters &amp; More</h3>
+          <p>Homeowners, renters, condo, landlord, mobile home, and umbrella — your property, fully protected.</p>
+          <a href="coverage.html" class="feat-item__link">View property coverage <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="feat-item">
+          <div class="feat-item__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="feat-item__num">Bundles</div>
+          <h3>Multi-Policy Discounts</h3>
+          <p>Combine home and auto — or more — with the same carrier and earn significant multi-policy savings.</p>
+          <a href="contact.html" class="feat-item__link">Get a bundle quote <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
       </div>
-
-      <div class="services__grid" id="servicesGrid">
-
-        <!-- PERSONAL -->
-        <article class="service-card" data-category="personal">
-          <div class="service-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-              <path d="M5 17H3v-5l2.5-5h11L19 12v5h-2"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/><path d="M3 12h16"/>
-            </svg>
-          </div>
-          <h3>Auto Insurance</h3>
-          <p>Car, truck, SUV — we compare rates across multiple carriers to find you the best coverage for what you drive.</p>
-          <a href="#contact" class="service-card__link">Get a Quote &rarr;</a>
-        </article>
-
-        <article class="service-card" data-category="personal">
-          <div class="service-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-              <path d="M5 18h14M4 15l2-7h12l2 7"/><path d="M7 15l1-5h8l1 5"/><circle cx="7" cy="18" r="1.5"/><circle cx="17" cy="18" r="1.5"/>
-            </svg>
-          </div>
-          <h3>Motorcycle Insurance</h3>
-          <p>Hit the open road with confidence. Comprehensive coverage for riders who live the Montana lifestyle.</p>
-          <a href="#contact" class="service-card__link">Get a Quote &rarr;</a>
-        </article>
-
-        <article class="service-card" data-category="personal">
-          <div class="service-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-              <rect x="1" y="8" width="18" height="10" rx="1"/><path d="M19 11h3l1 3v3h-4"/><circle cx="6" cy="18" r="2"/><circle cx="16" cy="18" r="2"/><path d="M1 12h18"/>
-            </svg>
-          </div>
-          <h3>RV Insurance</h3>
-          <p>Adventure awaits. Specialized coverage for motorhomes, campers, and travel trailers across Montana and beyond.</p>
-          <a href="#contact" class="service-card__link">Get a Quote &rarr;</a>
-        </article>
-
-        <article class="service-card" data-category="personal">
-          <div class="service-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-              <path d="M3 14s1-1 4-1 5 2 8 2 4-1 4-1V7s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="3" y1="21" x2="3" y2="14"/>
-            </svg>
-          </div>
-          <h3>Boat &amp; Jet Ski</h3>
-          <p>From quiet lake days to river adventures — protect your watercraft all season long with the right policy.</p>
-          <a href="#contact" class="service-card__link">Get a Quote &rarr;</a>
-        </article>
-
-        <article class="service-card" data-category="personal">
-          <div class="service-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-              <circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/>
-            </svg>
-          </div>
-          <h3>ATV &amp; Snowmobile</h3>
-          <p>Whether it's summer trails or winter powder, your off-road equipment deserves solid protection year-round.</p>
-          <a href="#contact" class="service-card__link">Get a Quote &rarr;</a>
-        </article>
-
-        <article class="service-card" data-category="personal">
-          <div class="service-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-              <path d="M3 17h18M5 17V9l2-5h10l2 5v8"/><path d="M8 9h8"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/>
-            </svg>
-          </div>
-          <h3>Collector Car Insurance</h3>
-          <p>Your classic deserves specialized protection. Coverage through Hagerty and other top collector car carriers.</p>
-          <a href="#contact" class="service-card__link">Get a Quote &rarr;</a>
-        </article>
-
-        <!-- PROPERTY -->
-        <article class="service-card" data-category="property">
-          <div class="service-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
-            </svg>
-          </div>
-          <h3>Home Insurance</h3>
-          <p>Protect your biggest investment with tailored homeowner policies, replacement cost coverage, and bundle discounts.</p>
-          <a href="#contact" class="service-card__link">Get a Quote &rarr;</a>
-        </article>
-
-        <article class="service-card" data-category="property">
-          <div class="service-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-              <path d="M20 9v11a2 2 0 01-2 2H6a2 2 0 01-2-2V9"/><path d="M9 22V12h6v10"/><path d="M2 10.6L12 2l10 8.6"/>
-            </svg>
-          </div>
-          <h3>Renters Insurance</h3>
-          <p>Your landlord's policy doesn't cover your belongings. Affordable renters insurance protects everything you own.</p>
-          <a href="#contact" class="service-card__link">Get a Quote &rarr;</a>
-        </article>
-
-        <article class="service-card" data-category="property">
-          <div class="service-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-              <rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/>
-            </svg>
-          </div>
-          <h3>Condo Insurance</h3>
-          <p>Coverage for your unit's interior, personal property, and liability — filling the gaps your HOA policy leaves behind.</p>
-          <a href="#contact" class="service-card__link">Get a Quote &rarr;</a>
-        </article>
-
-        <article class="service-card" data-category="property">
-          <div class="service-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-              <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 11-7.778 7.778 5.5 5.5 0 017.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/>
-            </svg>
-          </div>
-          <h3>Landlord Insurance</h3>
-          <p>Protect your rental property and rental income from damage, liability, and unexpected loss of use.</p>
-          <a href="#contact" class="service-card__link">Get a Quote &rarr;</a>
-        </article>
-
-        <article class="service-card" data-category="property">
-          <div class="service-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-              <path d="M2 8h20v12a2 2 0 01-2 2H4a2 2 0 01-2-2V8z"/><path d="M2 8l2-4h16l2 4"/><path d="M12 8v14"/>
-            </svg>
-          </div>
-          <h3>Mobile Home Insurance</h3>
-          <p>Specialized policies for manufactured and mobile homes — tailored coverage built for your specific situation.</p>
-          <a href="#contact" class="service-card__link">Get a Quote &rarr;</a>
-        </article>
-
-        <article class="service-card" data-category="property">
-          <div class="service-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-              <path d="M23 12a11.05 11.05 0 00-22 0zm-5 7a3 3 0 01-6 0v-7"/>
-            </svg>
-          </div>
-          <h3>Umbrella Insurance</h3>
-          <p>An extra layer of liability protection above your standard policies — peace of mind for life's unexpected moments.</p>
-          <a href="#contact" class="service-card__link">Get a Quote &rarr;</a>
-        </article>
-
-      </div><!-- /services__grid -->
+      <div class="featured-coverage__all">
+        <a href="coverage.html">View all 13 coverage types &rarr;</a>
+      </div>
     </div>
   </section>
 
-  <!-- ==================== LIFESTYLE: HOUSE ==================== -->
-  <section class="lifestyle" id="lifestyle" aria-label="Home insurance visual">
-    <div class="lifestyle__visual">
-      <img
-        src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1400&q=85"
-        alt="Beautiful home protected by Conver &amp; Winchell Insurance"
-        loading="lazy"
-      />
-    </div>
-    <div class="lifestyle__content">
-      <div class="section-tag">Home &amp; Property</div>
-      <h2>Your Home.<br>Your Story.<br>Protected.</h2>
-      <p>
-        Your home is more than a building — it's where your life happens. We build homeowner policies that reflect that, with replacement cost coverage, 24/7 support, and bundle discounts that reward loyalty.
-      </p>
-      <a href="#contact" class="btn-primary">
-        <span>Get a Home Insurance Quote</span>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-    </div>
-  </section>
-
-  <!-- ==================== WHY US ==================== -->
-  <section class="section why-us" id="why-us">
+  <!-- WHY US (condensed 3-col) -->
+  <section class="section why-us">
     <div class="container">
       <div class="section-header">
         <div class="section-tag">Why Choose Us</div>
         <h2>Personal Service.<br>Local Agent. Right Protection.</h2>
-        <p>We're not a call center or a faceless website. We're your neighbors, and we take that seriously.</p>
+        <p>We're not a call center. We're your neighbors, and we take that seriously.</p>
       </div>
       <div class="why-grid">
-
         <div class="why-card">
-          <div class="why-card__icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
-            </svg>
-          </div>
+          <div class="why-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
           <h3>Independent Agency</h3>
-          <p>We work for <em>you</em>, not one insurance company. We compare coverage across 11+ carriers to find your best fit — with no pressure and no bias.</p>
+          <p>We work for <em>you</em>. We compare coverage across 11+ carriers with no pressure and no bias — just the right policy at the right price.</p>
         </div>
-
         <div class="why-card">
-          <div class="why-card__icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
-            </svg>
-          </div>
+          <div class="why-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
           <h3>Truly Local</h3>
-          <p>Sara McLean has been a Billings resident since 1998. We know Montana's climate, lifestyle, and risks — because we live here too.</p>
+          <p>Sara McLean has called Billings home since 1998. We know Montana's climate, lifestyle, and risks — because we live here too.</p>
         </div>
-
         <div class="why-card">
-          <div class="why-card__icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <path d="M9 12l2 2 4-4"/><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-          </div>
-          <h3>Right Coverage, Right Price</h3>
-          <p>We take time to understand your needs and find policies that actually protect you — not just the cheapest option or the most expensive one.</p>
-        </div>
-
-        <div class="why-card">
-          <div class="why-card__icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-            </svg>
-          </div>
-          <h3>24/7 Claims Support</h3>
-          <p>When something goes wrong, it rarely waits for business hours. Your carrier's claims team is reachable around the clock, any day of the year.</p>
-        </div>
-
-        <div class="why-card">
-          <div class="why-card__icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
-            </svg>
-          </div>
-          <h3>Bundle &amp; Save</h3>
-          <p>Combine home, auto, and more with the same carrier for significant multi-policy discounts — better protection for less.</p>
-        </div>
-
-        <div class="why-card">
-          <div class="why-card__icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
-            </svg>
-          </div>
+          <div class="why-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
           <h3>Real People, Real Help</h3>
-          <p>Call, email, or stop by. Sara and Brandi are here to answer questions, make changes, and make insurance actually make sense for you.</p>
+          <p>Call, email, or stop by. Sara and Brandi are here to answer questions and make insurance actually make sense.</p>
         </div>
-
+      </div>
+      <div style="text-align:center; margin-top:40px;">
+        <a href="about.html" class="feat-item__link" style="font-size:13px; font-weight:700; color:var(--navy); text-transform:uppercase; letter-spacing:0.08em; border-bottom:1px solid var(--navy); padding-bottom:2px;">Learn more about us &rarr;</a>
       </div>
     </div>
   </section>
 
-  <!-- ==================== TEAM ==================== -->
-  <section class="section team" id="team">
+  <!-- LIFESTYLE: HOUSE -->
+  <section class="lifestyle">
+    <div class="lifestyle__visual">
+      <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1400&q=85" alt="Beautiful home protected by Conver &amp; Winchell" loading="lazy" />
+    </div>
+    <div class="lifestyle__content">
+      <div class="section-tag">Home &amp; Property</div>
+      <h2>Your Home.<br>Your Story.<br>Protected.</h2>
+      <p>Your home is more than a building. We build homeowner policies that reflect that — with replacement cost coverage, 24/7 claims support, and bundle discounts.</p>
+      <a href="contact.html" class="btn-primary" style="margin-top:8px; align-self:flex-start;">
+        <span>Get a Home Insurance Quote</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <div class="cta-strip">
     <div class="container">
-      <div class="section-header">
-        <div class="section-tag">Meet the Team</div>
-        <h2>The People Behind<br>Your Protection</h2>
-        <p>Small agency. Big commitment. We're proud to be a part of the Billings community.</p>
-      </div>
-      <div class="team__grid">
-
-        <div class="team-card">
-          <div class="team-card__photo">
-            <img
-              src="https://static.wixstatic.com/media/12cca8_d02ec8679305476683359a0a6bf29cc0~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Sara%20(002).jpg"
-              alt="Sara McLean, Owner"
-              loading="lazy"
-              onerror="this.closest('.team-card__photo').classList.add('team-card__photo--fallback'); this.remove();"
-            />
-            <div class="team-card__photo-fallback">SM</div>
-          </div>
-          <div class="team-card__info">
-            <h3>Sara McLean</h3>
-            <span class="team-card__role">Owner &amp; Insurance Agent</span>
-            <p>
-              A Billings resident since 1998, Sara has spent over 20 years in the insurance industry. She became a partner in 2010 and took over as sole owner in 2017. As a mother of two, she understands firsthand how important it is to protect your family and everything you've worked hard for.
-            </p>
-          </div>
+      <div class="cta-strip__inner">
+        <div>
+          <h2>Ready to Get the Right Coverage?</h2>
+          <p>A free quote takes just a few minutes. No pressure, no obligation.</p>
         </div>
-
-        <div class="team-card">
-          <div class="team-card__photo">
-            <img
-              src="https://static.wixstatic.com/media/12cca8_3670897a6ec94ff3b78b48278ae83d05~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Brandi.jpg"
-              alt="Brandi Deming, Customer Service Specialist"
-              loading="lazy"
-              onerror="this.closest('.team-card__photo').classList.add('team-card__photo--fallback'); this.remove();"
-            />
-            <div class="team-card__photo-fallback">BD</div>
-          </div>
-          <div class="team-card__info">
-            <h3>Brandi Deming</h3>
-            <span class="team-card__role">Customer Service Specialist</span>
-            <p>
-              A lifelong Billings resident, Brandi joined the team in 2021 after 15+ years managing customer service in a fast-paced environment. Her deep community roots and genuine care for people make her a perfect fit for helping clients understand and navigate their coverage.
-            </p>
-          </div>
-        </div>
-
+        <a href="contact.html" class="btn-primary">
+          <span>Request a Free Quote</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- ==================== CARRIERS ==================== -->
-  <section class="section carriers" id="carriers">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">Our Partners</div>
-        <h2>Top Carriers,<br>One Trusted Agency</h2>
-        <p>We're not locked into a single insurance company. We partner with 11+ top-rated carriers so we can always find the right fit for you.</p>
-      </div>
-      <div class="carriers__logos">
-        <img class="carrier-logo" src="https://static.wixstatic.com/media/12cca8_eb70cc2b3afc4ffab5238d808706088e~mv2.jpg/v1/fill/w_230,h_42,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Progressive-Logo.jpg" alt="Progressive" loading="lazy" />
-        <img class="carrier-logo" src="https://static.wixstatic.com/media/12cca8_be82174fc90d4200a54d570a594340ab~mv2.jpg/v1/fill/w_220,h_53,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/safeco-insurance-logo-vector-safecologo.jpg" alt="Safeco" loading="lazy" />
-        <img class="carrier-logo" src="https://static.wixstatic.com/media/12cca8_a5897dedb7a54caf919b7705b8a8332e~mv2.jpg/v1/fill/w_167,h_104,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Travelers-Logo.jpg" alt="Travelers" loading="lazy" />
-        <img class="carrier-logo" src="https://static.wixstatic.com/media/12cca8_f392fc40018f4c13a8d346295acd20ad~mv2.png/v1/fill/w_142,h_68,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/HARTFORD.png" alt="The Hartford" loading="lazy" />
-        <img class="carrier-logo" src="https://static.wixstatic.com/media/12cca8_542b63949d0f4581acd6d596372db9f6~mv2.png/v1/fill/w_180,h_42,al_c,q_85,enc_avif,quality_auto/Foremost_color_med.png" alt="Foremost" loading="lazy" />
-        <img class="carrier-logo" src="https://static.wixstatic.com/media/12cca8_94cd433cd9ab499a893c1ceb09496457~mv2.png/v1/fill/w_180,h_34,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/hagerty.png" alt="Hagerty" loading="lazy" />
-        <img class="carrier-logo" src="https://static.wixstatic.com/media/12cca8_4eeb69798c844471b12ec43713941ce2~mv2.jpg/v1/fill/w_144,h_68,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/AMIG-logo.jpg" alt="American Modern" loading="lazy" />
-        <img class="carrier-logo" src="https://static.wixstatic.com/media/12cca8_051c0cf121d84843b0f9e09557c75b91~mv2.png/v1/crop/x_0,y_3,w_276,h_94/fill/w_180,h_61,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/branch.png" alt="Branch" loading="lazy" />
-        <img class="carrier-logo" src="https://static.wixstatic.com/media/12cca8_ef57042d51fb4580a49aae3b938a0dbe~mv2.png/v1/crop/x_0,y_8,w_237,h_86/fill/w_180,h_65,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/typtap.png" alt="TypTap" loading="lazy" />
-        <span class="carrier-text-badge">Bristol West</span>
-        <span class="carrier-text-badge">Aegis</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== CONTACT / QUOTE ==================== -->
-  <section class="cta-section" id="contact">
-    <div class="container">
-      <div class="cta-box">
-
-        <div class="cta-box__content">
-          <h2>Ready to Find the Right Coverage?</h2>
-          <p>Getting a quote is quick, easy, and completely free. Fill out the form and we'll reach out — usually within one business day.</p>
-          <div class="cta-box__contact-list">
-            <div class="contact-row">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 8.91A16 16 0 0015 17.91l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
-              <a href="tel:4066529610">(406) 652-9610</a>
-            </div>
-            <div class="contact-row">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span>2500 Grand Ave. Ste S, Billings, MT 59102</span>
-            </div>
-            <div class="contact-row">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              <span>Mon – Fri &nbsp;|&nbsp; 8:30 AM – 5:00 PM</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="cta-box__form">
-          <form
-            class="quote-form"
-            id="quoteForm"
-            name="quote-request"
-            netlify
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            novalidate
-          >
-            <input type="hidden" name="form-name" value="quote-request" />
-            <input type="hidden" name="bot-field" />
-            <h3>Request a Free Quote</h3>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text" id="firstName" name="firstName" placeholder="Jane" required />
-              </div>
-              <div class="form-group">
-                <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" name="lastName" placeholder="Smith" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="jane@example.com" required />
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="(406) 555-0100" />
-            </div>
-            <div class="form-group">
-              <label for="coverage">Coverage Needed</label>
-              <select id="coverage" name="coverage">
-                <option value="">Select a coverage type...</option>
-                <option>Auto Insurance</option>
-                <option>Home Insurance</option>
-                <option>Renters Insurance</option>
-                <option>RV Insurance</option>
-                <option>Boat / Jet Ski Insurance</option>
-                <option>Motorcycle Insurance</option>
-                <option>ATV / Snowmobile Insurance</option>
-                <option>Condo Insurance</option>
-                <option>Landlord Insurance</option>
-                <option>Mobile Home Insurance</option>
-                <option>Umbrella Insurance</option>
-                <option>Collector Car Insurance</option>
-                <option>Multiple / Bundle</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message">Anything we should know?</label>
-              <textarea id="message" name="message" rows="3" placeholder="Optional — tell us a bit about what you're looking for..."></textarea>
-            </div>
-            <button type="submit" class="btn-primary btn--full">
-              <span>Send My Quote Request</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-            <p class="form-note">We typically respond within one business day. No spam, ever.</p>
-          </form>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== CLAIMS ==================== -->
-  <section class="section claims" id="claims">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">Claims</div>
-        <h2>Need to File a Claim?</h2>
-        <p>Contact your carrier directly for the fastest service. All claim lines are staffed 24 hours a day, 7 days a week.</p>
-      </div>
-      <div class="claims__grid">
-        <div class="claim-card"><div class="claim-card__carrier">Progressive</div><a href="tel:18002744499" class="claim-card__phone">1-800-274-4499</a></div>
-        <div class="claim-card"><div class="claim-card__carrier">The Hartford</div><a href="tel:18002435860" class="claim-card__phone">1-800-243-5860</a></div>
-        <div class="claim-card"><div class="claim-card__carrier">Safeco</div><a href="tel:8003323226" class="claim-card__phone">800-332-3226</a></div>
-        <div class="claim-card"><div class="claim-card__carrier">Travelers</div><a href="tel:18002524633" class="claim-card__phone">1-800-252-4633</a></div>
-        <div class="claim-card"><div class="claim-card__carrier">American Modern</div><a href="tel:8003752075" class="claim-card__phone">800-375-2075</a></div>
-        <div class="claim-card"><div class="claim-card__carrier">Foremost</div><a href="tel:18008212000" class="claim-card__phone">1-800-821-2000</a></div>
-        <div class="claim-card"><div class="claim-card__carrier">Hagerty</div><a href="tel:18009224050" class="claim-card__phone">1-800-922-4050</a></div>
-        <div class="claim-card"><div class="claim-card__carrier">Bristol West</div><a href="tel:18003601727" class="claim-card__phone">1-800-360-1727</a></div>
-      </div>
-      <div class="claims__note">
-        <p>Can't find your carrier? <a href="tel:4066529610">Call our office at (406) 652-9610</a> during business hours and we'll help you get connected.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== FOOTER ==================== -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer__inner">
-
       <div class="footer__brand">
-        <div class="footer__wordmark">
-          <span>Conver &amp; Winchell</span>
-          <small>Insurance</small>
-        </div>
+        <div class="footer__wordmark"><span>Conver &amp; Winchell</span><small>Insurance</small></div>
         <p>Independent insurance agency in Billings, Montana. Personal service. Local expertise. Right protection since 2003.</p>
         <div class="footer__contact-info">
           <a href="tel:4066529610">(406) 652-9610</a>
@@ -576,48 +196,40 @@
           <span>2500 Grand Ave. Ste S · Billings, MT 59102</span>
         </div>
       </div>
-
       <div class="footer__col">
         <h4>Vehicles</h4>
         <ul>
-          <li><a href="#services">Auto Insurance</a></li>
-          <li><a href="#services">Motorcycle Insurance</a></li>
-          <li><a href="#services">RV Insurance</a></li>
-          <li><a href="#services">Boat &amp; Jet Ski</a></li>
-          <li><a href="#services">ATV &amp; Snowmobile</a></li>
-          <li><a href="#services">Collector Car</a></li>
+          <li><a href="coverage.html">Auto Insurance</a></li>
+          <li><a href="coverage.html">Motorcycle Insurance</a></li>
+          <li><a href="coverage.html">RV Insurance</a></li>
+          <li><a href="coverage.html">Boat &amp; Jet Ski</a></li>
+          <li><a href="coverage.html">ATV &amp; Snowmobile</a></li>
+          <li><a href="coverage.html">Collector Car</a></li>
         </ul>
       </div>
-
       <div class="footer__col">
         <h4>Property</h4>
         <ul>
-          <li><a href="#services">Home Insurance</a></li>
-          <li><a href="#services">Renters Insurance</a></li>
-          <li><a href="#services">Condo Insurance</a></li>
-          <li><a href="#services">Landlord Insurance</a></li>
-          <li><a href="#services">Mobile Home</a></li>
-          <li><a href="#services">Umbrella Insurance</a></li>
+          <li><a href="coverage.html">Home Insurance</a></li>
+          <li><a href="coverage.html">Renters Insurance</a></li>
+          <li><a href="coverage.html">Condo Insurance</a></li>
+          <li><a href="coverage.html">Landlord Insurance</a></li>
+          <li><a href="coverage.html">Mobile Home</a></li>
+          <li><a href="coverage.html">Umbrella Insurance</a></li>
         </ul>
       </div>
-
       <div class="footer__col">
         <h4>Agency</h4>
         <ul>
-          <li><a href="#why-us">Why Choose Us</a></li>
-          <li><a href="#team">Our Team</a></li>
-          <li><a href="#carriers">Our Carriers</a></li>
-          <li><a href="#claims">File a Claim</a></li>
-          <li><a href="#contact">Get a Quote</a></li>
+          <li><a href="about.html">Why Choose Us</a></li>
+          <li><a href="about.html">Our Team</a></li>
+          <li><a href="about.html">Our Carriers</a></li>
+          <li><a href="contact.html">File a Claim</a></li>
+          <li><a href="contact.html">Get a Quote</a></li>
         </ul>
       </div>
-
     </div>
-    <div class="footer__bottom">
-      <div class="container">
-        <p>&copy; 2024 Conver &amp; Winchell Insurance. All rights reserved. &nbsp;|&nbsp; Billings, Montana</p>
-      </div>
-    </div>
+    <div class="footer__bottom"><div class="container"><p>&copy; 2024 Conver &amp; Winchell Insurance. All rights reserved. &nbsp;|&nbsp; Billings, Montana</p></div></div>
   </footer>
 
   <script src="js/main.js"></script>

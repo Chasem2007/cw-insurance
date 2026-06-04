@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact &amp; Get a Quote | Conver &amp; Winchell Insurance | Billings, MT</title>
+  <meta name="description" content="Request a free insurance quote or file a claim. Conver &amp; Winchell Insurance — (406) 652-9610 — 2500 Grand Ave. Ste S, Billings, MT 59102." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__brand">
+        <img class="nav__logo-img" src="images/logo.jpg" alt="Conver &amp; Winchell Insurance" height="36" />
+        <div class="nav__wordmark">
+          <span class="nav__wordmark-main">Conver &amp; Winchell</span>
+          <span class="nav__wordmark-sub">Insurance</span>
+        </div>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="coverage.html">Coverage</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html" class="nav__quote-btn">Get a Quote</a>
+      </nav>
+      <button class="nav__hamburger" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container page-hero__content">
+      <div class="page-hero__breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span style="color:rgba(255,255,255,0.65)">Contact</span>
+      </div>
+      <h1>Get in Touch</h1>
+      <p>Request a free quote, ask a question, or stop by our office. We're here Monday through Friday, 8:30 AM – 5:00 PM.</p>
+    </div>
+  </div>
+
+  <!-- CONTACT INFO STRIP -->
+  <div class="contact-info-strip">
+    <div class="container">
+      <div class="contact-info-strip__grid">
+        <div class="contact-info-item">
+          <div class="contact-info-item__label">Phone</div>
+          <div class="contact-info-item__value"><a href="tel:4066529610">(406) 652-9610</a></div>
+          <div class="contact-info-item__sub">Call or text during business hours</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-item__label">Office</div>
+          <div class="contact-info-item__value">2500 Grand Ave. Ste S</div>
+          <div class="contact-info-item__sub">Billings, MT 59102</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-item__label">Hours</div>
+          <div class="contact-info-item__value">Mon – Fri</div>
+          <div class="contact-info-item__sub">8:30 AM – 5:00 PM · Closed weekends</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUOTE FORM -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-box__content">
+          <h2>Request a Free Quote</h2>
+          <p>Fill out the form and we'll reach out — usually within one business day. No spam, no pressure.</p>
+          <div class="cta-box__contact-list">
+            <div class="contact-row">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 8.91A16 16 0 0015 17.91l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <a href="tel:4066529610">(406) 652-9610</a>
+            </div>
+            <div class="contact-row">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>2500 Grand Ave. Ste S, Billings, MT 59102</span>
+            </div>
+            <div class="contact-row">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Mon – Fri &nbsp;|&nbsp; 8:30 AM – 5:00 PM</span>
+            </div>
+          </div>
+        </div>
+        <div class="cta-box__form">
+          <form class="quote-form" id="quoteForm" name="quote-request" netlify data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+            <input type="hidden" name="form-name" value="quote-request" />
+            <input type="hidden" name="bot-field" />
+            <h3>Your Information</h3>
+            <div class="form-row">
+              <div class="form-group"><label for="firstName">First Name</label><input type="text" id="firstName" name="firstName" placeholder="Jane" required /></div>
+              <div class="form-group"><label for="lastName">Last Name</label><input type="text" id="lastName" name="lastName" placeholder="Smith" required /></div>
+            </div>
+            <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="jane@example.com" required /></div>
+            <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="(406) 555-0100" /></div>
+            <div class="form-group">
+              <label for="coverage">Coverage Needed</label>
+              <select id="coverage" name="coverage">
+                <option value="">Select a coverage type...</option>
+                <option>Auto Insurance</option><option>Home Insurance</option>
+                <option>Renters Insurance</option><option>RV Insurance</option>
+                <option>Boat / Jet Ski Insurance</option><option>Motorcycle Insurance</option>
+                <option>ATV / Snowmobile Insurance</option><option>Condo Insurance</option>
+                <option>Landlord Insurance</option><option>Mobile Home Insurance</option>
+                <option>Umbrella Insurance</option><option>Collector Car Insurance</option>
+                <option>Multiple / Bundle</option>
+              </select>
+            </div>
+            <div class="form-group"><label for="message">Anything we should know?</label><textarea id="message" name="message" rows="3" placeholder="Optional — tell us a bit about what you're looking for..."></textarea></div>
+            <button type="submit" class="btn-primary btn--full">
+              <span>Send My Quote Request</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <p class="form-note">We typically respond within one business day. No spam, ever.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLAIMS -->
+  <section class="section claims">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Claims</div>
+        <h2>Need to File a Claim?</h2>
+        <p>Contact your carrier directly for the fastest service. All lines are staffed 24 hours a day, 7 days a week.</p>
+      </div>
+      <div class="claims__grid">
+        <div class="claim-card"><div class="claim-card__carrier">Progressive</div><a href="tel:18002744499" class="claim-card__phone">1-800-274-4499</a></div>
+        <div class="claim-card"><div class="claim-card__carrier">The Hartford</div><a href="tel:18002435860" class="claim-card__phone">1-800-243-5860</a></div>
+        <div class="claim-card"><div class="claim-card__carrier">Safeco</div><a href="tel:8003323226" class="claim-card__phone">800-332-3226</a></div>
+        <div class="claim-card"><div class="claim-card__carrier">Travelers</div><a href="tel:18002524633" class="claim-card__phone">1-800-252-4633</a></div>
+        <div class="claim-card"><div class="claim-card__carrier">American Modern</div><a href="tel:8003752075" class="claim-card__phone">800-375-2075</a></div>
+        <div class="claim-card"><div class="claim-card__carrier">Foremost</div><a href="tel:18008212000" class="claim-card__phone">1-800-821-2000</a></div>
+        <div class="claim-card"><div class="claim-card__carrier">Hagerty</div><a href="tel:18009224050" class="claim-card__phone">1-800-922-4050</a></div>
+        <div class="claim-card"><div class="claim-card__carrier">Bristol West</div><a href="tel:18003601727" class="claim-card__phone">1-800-360-1727</a></div>
+      </div>
+      <div class="claims__note">
+        <p>Can't find your carrier? <a href="tel:4066529610">Call our office at (406) 652-9610</a> and we'll help you get connected.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="footer__wordmark"><span>Conver &amp; Winchell</span><small>Insurance</small></div>
+        <p>Independent insurance agency in Billings, Montana. Personal service. Local expertise. Right protection since 2003.</p>
+        <div class="footer__contact-info">
+          <a href="tel:4066529610">(406) 652-9610</a>
+          <span>Mon – Fri, 8:30 AM – 5:00 PM</span>
+          <span>2500 Grand Ave. Ste S · Billings, MT 59102</span>
+        </div>
+      </div>
+      <div class="footer__col"><h4>Vehicles</h4><ul><li><a href="coverage.html">Auto Insurance</a></li><li><a href="coverage.html">Motorcycle</a></li><li><a href="coverage.html">RV Insurance</a></li><li><a href="coverage.html">Boat &amp; Jet Ski</a></li><li><a href="coverage.html">ATV &amp; Snowmobile</a></li><li><a href="coverage.html">Collector Car</a></li></ul></div>
+      <div class="footer__col"><h4>Property</h4><ul><li><a href="coverage.html">Home Insurance</a></li><li><a href="coverage.html">Renters Insurance</a></li><li><a href="coverage.html">Condo Insurance</a></li><li><a href="coverage.html">Landlord Insurance</a></li><li><a href="coverage.html">Mobile Home</a></li><li><a href="coverage.html">Umbrella Insurance</a></li></ul></div>
+      <div class="footer__col"><h4>Agency</h4><ul><li><a href="about.html">Why Choose Us</a></li><li><a href="about.html">Our Team</a></li><li><a href="about.html">Our Carriers</a></li><li><a href="contact.html">File a Claim</a></li><li><a href="contact.html">Get a Quote</a></li></ul></div>
+    </div>
+    <div class="footer__bottom"><div class="container"><p>&copy; 2024 Conver &amp; Winchell Insurance. All rights reserved. &nbsp;|&nbsp; Billings, Montana</p></div></div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
