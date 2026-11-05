@@ -3,26 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#395849" />
   <title>Conver &amp; Winchell Insurance | Billings, Montana</title>
-  <meta name="description" content="Billings' trusted independent insurance agency since 2003. Personal service for home, auto, RV, boat, renters, and more. Call (406) 652-9610." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="description" content="Billings' trusted independent insurance agency since 2003. We shop multiple carriers for home, auto, RV, boat, and renters coverage. Free quote. Call (406) 652-9610." />
+  <link rel="canonical" href="https://www.converwinchell.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Conver &amp; Winchell Insurance | Billings, Montana" />
+  <meta property="og:description" content="Independent insurance agency in Billings, MT since 2003. One conversation, quotes from multiple carriers." />
+  <meta property="og:image" content="images/logo.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="images/logo.png" />
+  <link rel="preload" href="fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/sono-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" as="image" href="images/hero-billings.jpg" fetchpriority="high" />
+  <link rel="stylesheet" href="css/styles.css?v=18" />
+  <script>
+    /* Decide before first paint whether the opening sequence plays, so the
+       curtain is never a flash on top of an already-visible hero.
+       Plays on every load of the home page; set REPLAY to false for
+       once-per-browser-session instead. ?intro=0 skips it. */
+    (function () {
+      var REPLAY = true;
+      try {
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        if (/[?&]intro=0/.test(window.location.search)) return;
+        // Phones skip the curtain: on a throttled connection it costs ~2s of
+        // Speed Index before anything useful is on screen. ?intro=1 forces it.
+        if (window.matchMedia('(max-width: 768px)').matches && !/[?&]intro=1/.test(window.location.search)) return;
+        if (!REPLAY && !/[?&]intro=1/.test(window.location.search)) {
+          try { if (window.sessionStorage.getItem('cw-intro') === '1') return; } catch (e) {}
+        }
+        document.documentElement.className += ' intro-active';
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
+
+  <!-- OPENING SEQUENCE - only rendered when html.intro-active (see head script) -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro__panel intro__panel--top"></div>
+    <div class="intro__panel intro__panel--bottom"></div>
+    <div class="intro__seam"></div>
+    <div class="intro__inner">
+      <div class="intro__mark">
+        <img src="images/logo-white.png" alt="" height="56" />
+      </div>
+      <div class="intro__rule"></div>
+      <div class="intro__meta">Billings, Montana &nbsp;&middot;&nbsp; Est. 2003</div>
+    </div>
+  </div>
 
   <header class="nav" id="nav">
     <div class="container nav__inner">
       <a href="index.html" class="nav__brand">
-        <img class="nav__logo-img" src="images/logo.jpg" alt="Conver &amp; Winchell Insurance" height="36" />
-        <div class="nav__wordmark">
-          <span class="nav__wordmark-main">Conver &amp; Winchell</span>
-          <span class="nav__wordmark-sub">Insurance</span>
-        </div>
+        <img class="nav__logo nav__logo--light" src="images/logo-white.png" alt="Conver &amp; Winchell Insurance" height="36" />
+        <img class="nav__logo nav__logo--dark" src="images/logo.png" alt="Conver &amp; Winchell Insurance" height="36" />
       </a>
       <nav class="nav__links" id="navLinks">
         <a href="coverage.html">Coverage</a>
+        <a href="team.html">Our Team</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact</a>
         <a href="contact.html" class="nav__quote-btn">Get a Quote</a>
@@ -35,15 +75,24 @@
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="hero__left">
-      <div class="hero__logo-lockup">
-        <span class="hero__logo-main">Conver &amp; Winchell</span>
-        <span class="hero__logo-rule"></span>
-        <span class="hero__logo-sub">Insurance</span>
+    <div class="hero__bg" data-parallax="0.22" aria-hidden="true"></div>
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__aurora" aria-hidden="true"></div>
+    <div class="container hero__content">
+      <div class="hero__eyebrow">Independent Agency &nbsp;·&nbsp; Billings, Montana &nbsp;·&nbsp; Est. 2003</div>
+      <div class="hero__lead">
+        <h1 class="hero__title">Protect <br>everything <br>you've built.</h1>
+        <div class="hero__info">
+          <div class="hero__info-item">
+            <span class="hero__info-label">Office</span>
+            <span>2500 Grand Ave. Ste S<br>Billings, MT 59102</span>
+          </div>
+          <div class="hero__info-item">
+            <span class="hero__info-label">Hours</span>
+            <span>Monday – Friday<br>8:30 AM – 5:00 PM</span>
+          </div>
+        </div>
       </div>
-      <div class="hero__eyebrow">Independent Agency &nbsp;·&nbsp; Billings, MT &nbsp;·&nbsp; Est. 2003</div>
-      <h1 class="hero__title">Protecting What<br>Matters Most to You</h1>
-      <p class="hero__desc">Personal service from a local agent who truly knows Billings. We shop 11+ carriers to find the right coverage at the right price — for your home, your vehicles, and everything in between.</p>
       <div class="hero__ctas">
         <a href="contact.html" class="btn-primary">
           <span>Get a Free Quote</span>
@@ -57,114 +106,264 @@
       <div class="hero__carriers">
         <span class="hero__carriers-label">Trusted carriers include</span>
         <div class="hero__carrier-list">
-          <span>Progressive</span><span>Safeco</span><span>Travelers</span>
-          <span>The Hartford</span><span>Foremost</span><span>&amp; more</span>
+          <span>Foremost</span><span>Liberty Mutual</span><span>Progressive</span>
+          <span>The Hartford</span><span>Travelers</span><span>&amp; more</span>
         </div>
       </div>
     </div>
-    <div class="hero__right" aria-hidden="true">
-      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=85" alt="" class="hero__car-img" loading="eager" />
-      <div class="hero__right-fade"></div>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <section class="stats">
-    <div class="container stats__grid">
-      <div class="stat"><div class="stat__number">20+</div><div class="stat__label">Years Serving Billings</div></div>
-      <div class="stat"><div class="stat__number">11+</div><div class="stat__label">Insurance Carriers</div></div>
-      <div class="stat"><div class="stat__number">13</div><div class="stat__label">Coverage Options</div></div>
-      <div class="stat"><div class="stat__number">24/7</div><div class="stat__label">Claims Support</div></div>
-    </div>
+    <a href="#explore" class="hero__scroll" aria-label="Scroll down">
+      Explore
+      <span></span>
+    </a>
   </section>
 
   <!-- FEATURED COVERAGE -->
-  <section class="section featured-coverage">
+  <section class="section featured-coverage" id="explore">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">Coverage</div>
         <h2>Protection for Every Part of Your Life</h2>
-        <p>As an independent agency we're not tied to one company — we shop across 11+ top carriers to find the right policy for you.</p>
+        <p>As an independent agency we're not tied to one company, so we shop across multiple top carriers to find the right policy for you.</p>
       </div>
       <div class="featured-coverage__grid">
-        <div class="feat-item">
-          <div class="feat-item__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 17H3v-5l2.5-5h11L19 12v5h-2"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/><path d="M3 12h16"/></svg>
+        <a class="panel" href="coverage.html">
+          <div class="panel__media">
+            <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&amp;fit=crop&amp;w=1200&amp;q=70" srcset="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&amp;fit=crop&amp;w=640&amp;q=70 640w, https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&amp;fit=crop&amp;w=1000&amp;q=70 1000w, https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&amp;fit=crop&amp;w=1600&amp;q=70 1600w" sizes="(max-width: 1200px) calc(100vw - 44px), 1136px" alt="" loading="lazy" />
           </div>
-          <div class="feat-item__num">Vehicles</div>
-          <h3>Auto, RV &amp; More</h3>
-          <p>Cars, trucks, motorcycles, RVs, ATVs, boats, snowmobiles, and collector cars — we cover it all.</p>
-          <a href="coverage.html" class="feat-item__link">View vehicle coverage <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        </div>
-        <div class="feat-item">
-          <div class="feat-item__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <div class="panel__body">
+            <span class="panel__label">Vehicles</span>
+            <h3 class="panel__title">Auto, RV &amp; More</h3>
+            <p class="panel__desc">Cars, trucks, motorcycles, RVs, ATVs, boats, snowmobiles, and collector cars. We cover it all.</p>
           </div>
-          <div class="feat-item__num">Property</div>
-          <h3>Home, Renters &amp; More</h3>
-          <p>Homeowners, renters, condo, landlord, mobile home, and umbrella — your property, fully protected.</p>
-          <a href="coverage.html" class="feat-item__link">View property coverage <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        </div>
-        <div class="feat-item">
-          <div class="feat-item__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </a>
+        <a class="panel" href="coverage.html">
+          <div class="panel__media">
+            <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&amp;fit=crop&amp;w=1200&amp;q=70" srcset="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&amp;fit=crop&amp;w=640&amp;q=70 640w, https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&amp;fit=crop&amp;w=1000&amp;q=70 1000w, https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&amp;fit=crop&amp;w=1600&amp;q=70 1600w" sizes="(max-width: 1200px) calc(100vw - 44px), 1136px" alt="" loading="lazy" />
           </div>
-          <div class="feat-item__num">Bundles</div>
-          <h3>Multi-Policy Discounts</h3>
-          <p>Combine home and auto — or more — with the same carrier and earn significant multi-policy savings.</p>
-          <a href="contact.html" class="feat-item__link">Get a bundle quote <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-      <div class="featured-coverage__all">
-        <a href="coverage.html">View all 13 coverage types &rarr;</a>
+          <div class="panel__body">
+            <span class="panel__label">Property</span>
+            <h3 class="panel__title">Home, Renters &amp; More</h3>
+            <p class="panel__desc">Homeowners, renters, condo, landlord, mobile home, and umbrella. Your property, fully protected.</p>
+          </div>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- WHY US (condensed 3-col) -->
-  <section class="section why-us">
+  <!-- CARRIER MARQUEE -->
+  <div class="marquee" aria-label="Carriers we work with">
+    <div class="marquee__track">
+        <span class="marquee__item">AARP</span>
+        <span class="marquee__item">Aegis</span>
+        <span class="marquee__item">American Modern</span>
+        <span class="marquee__item">Branch</span>
+        <span class="marquee__item">Bristol West</span>
+        <span class="marquee__item">Foremost</span>
+        <span class="marquee__item">Hagerty</span>
+        <span class="marquee__item">Liberty Mutual</span>
+        <span class="marquee__item">Personal Umbrella</span>
+        <span class="marquee__item">Progressive</span>
+        <span class="marquee__item">The Hartford</span>
+        <span class="marquee__item">Travelers</span>
+        <span class="marquee__item">AARP</span>
+        <span class="marquee__item">Aegis</span>
+        <span class="marquee__item">American Modern</span>
+        <span class="marquee__item">Branch</span>
+        <span class="marquee__item">Bristol West</span>
+        <span class="marquee__item">Foremost</span>
+        <span class="marquee__item">Hagerty</span>
+        <span class="marquee__item">Liberty Mutual</span>
+        <span class="marquee__item">Personal Umbrella</span>
+        <span class="marquee__item">Progressive</span>
+        <span class="marquee__item">The Hartford</span>
+        <span class="marquee__item">Travelers</span>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section class="section steps">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">Why Choose Us</div>
-        <h2>Personal Service.<br>Local Agent. Right Protection.</h2>
-        <p>We're not a call center. We're your neighbors, and we take that seriously.</p>
+        <div class="section-tag">How It Works</div>
+        <h2>How Getting <br>Covered Works</h2>
+        <p>No sales pitch, no pressure, and no obligation to switch.</p>
       </div>
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="why-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
-          <h3>Independent Agency</h3>
-          <p>We work for <em>you</em>. We compare coverage across 11+ carriers with no pressure and no bias — just the right policy at the right price.</p>
+      <div class="steps__grid">
+        <div class="step">
+          <div class="step__num">01</div>
+          <h3>Tell Us What You Have</h3>
+          <p>Call, request a quote online, or stop by the office. Bring your current declarations page if you have one. It tells us exactly what you're paying for today.</p>
         </div>
-        <div class="why-card">
-          <div class="why-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <h3>Truly Local</h3>
-          <p>Sara McLean has called Billings home since 1998. We know Montana's climate, lifestyle, and risks — because we live here too.</p>
+        <div class="step">
+          <div class="step__num">02</div>
+          <h3>We Shop Multiple Carriers</h3>
+          <p>We compare pricing and coverage across our carriers and come back with the options that genuinely fit, not just the cheapest number.</p>
         </div>
-        <div class="why-card">
-          <div class="why-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-          <h3>Real People, Real Help</h3>
-          <p>Call, email, or stop by. Sara and Brandi are here to answer questions and make insurance actually make sense.</p>
+        <div class="step">
+          <div class="step__num">03</div>
+          <h3>You Pick. We Handle It.</h3>
+          <p>Choose the policy that makes sense and we set it up to start on the right date. We can't cancel your old policy for you, so you'll contact that company directly, but we'll help you time it so you're never uninsured.</p>
         </div>
       </div>
-      <div style="text-align:center; margin-top:40px;">
-        <a href="about.html" class="feat-item__link" style="font-size:13px; font-weight:700; color:var(--navy); text-transform:uppercase; letter-spacing:0.08em; border-bottom:1px solid var(--navy); padding-bottom:2px;">Learn more about us &rarr;</a>
+      <div class="steps__footer">
+        <a href="contact.html" class="btn-primary">
+          <span>Start My Free Quote</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <span class="steps__footer-note">Or call <a href="tel:4066529610" style="color:var(--navy); font-weight:700; border-bottom:1px solid rgba(26,51,85,0.3);">(406) 652-9610</a>, Mon–Fri, 8:30–5:00</span>
       </div>
     </div>
   </section>
 
-  <!-- LIFESTYLE: HOUSE -->
-  <section class="lifestyle">
-    <div class="lifestyle__visual">
-      <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1400&q=85" alt="Beautiful home protected by Conver &amp; Winchell" loading="lazy" />
+  <!-- TEAM PREVIEW -->
+  <section class="section team-preview">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">The Staff</div>
+        <h2>You'll Know Exactly <br>Who You're Calling</h2>
+      </div>
+      <div class="team-preview__grid">
+        <a href="team.html" class="tp-card">
+          <div class="tp-card__photo">
+            <img src="images/team/sara-thumb.jpg" alt="Sara McLean, Owner and Agent" loading="lazy" onerror="this.parentElement.classList.add('tp-card__photo--fallback'); this.remove();" />
+            <div class="tp-card__monogram">SM</div>
+          </div>
+          <div class="tp-card__name">Sara McLean</div>
+          <div class="tp-card__role">Owner &amp; Agent</div>
+        </a>
+        <a href="team.html" class="tp-card">
+          <div class="tp-card__photo">
+            <img src="images/team/brandi-thumb.jpg" alt="Brandi Deming, Agent" loading="lazy" onerror="this.parentElement.classList.add('tp-card__photo--fallback'); this.remove();" />
+            <div class="tp-card__monogram">BD</div>
+          </div>
+          <div class="tp-card__name">Brandi Deming</div>
+          <div class="tp-card__role">Agent</div>
+        </a>
+        <a href="team.html" class="tp-card">
+          <div class="tp-card__photo">
+            <img src="images/team/charley-thumb.jpg" alt="Charley McLean, Client Support" loading="lazy" onerror="this.parentElement.classList.add('tp-card__photo--fallback'); this.remove();" />
+            <div class="tp-card__monogram">CM</div>
+          </div>
+          <div class="tp-card__name">Charley McLean</div>
+          <div class="tp-card__role">Client Support</div>
+        </a>
+      </div>
     </div>
-    <div class="lifestyle__content">
-      <div class="section-tag">Home &amp; Property</div>
-      <h2>Your Home.<br>Your Story.<br>Protected.</h2>
-      <p>Your home is more than a building. We build homeowner policies that reflect that — with replacement cost coverage, 24/7 claims support, and bundle discounts.</p>
-      <a href="contact.html" class="btn-primary" style="margin-top:8px; align-self:flex-start;">
-        <span>Get a Home Insurance Quote</span>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+  </section>
+
+  <!-- WHY US - full-bleed photo mosaic over a dark slab -->
+  <section class="mosaic why-us">
+    <div class="container">
+      <div class="mosaic__head">
+        <h2>Founded in Billings, we know <br>what Montana asks of you.</h2>
+      </div>
+    </div>
+
+    <div class="mosaic__grid" aria-hidden="true">
+      <figure class="mosaic__cell m-a"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&amp;fit=crop&amp;w=560&amp;q=75" alt="" loading="lazy" /></figure>
+      <figure class="mosaic__cell m-b"><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&amp;fit=crop&amp;w=560&amp;q=75" alt="" loading="lazy" /></figure>
+      <figure class="mosaic__cell m-c"><img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&amp;fit=crop&amp;w=760&amp;q=75" alt="" loading="lazy" /></figure>
+      <figure class="mosaic__cell m-d"><img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&amp;fit=crop&amp;w=760&amp;q=75" alt="" loading="lazy" /></figure>
+      <figure class="mosaic__cell m-e"><img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&amp;fit=crop&amp;w=760&amp;q=75" alt="" loading="lazy" /></figure>
+      <figure class="mosaic__cell m-f"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&amp;fit=crop&amp;w=1100&amp;q=75" alt="" loading="lazy" /></figure>
+      <figure class="mosaic__cell m-g"><img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&amp;fit=crop&amp;w=560&amp;q=75" alt="" loading="lazy" /></figure>
+    </div>
+
+    <div class="container">
+      <div class="mosaic__cols">
+        <div class="mosaic__col">
+          <h3>Independent <br>agency</h3>
+          <p>We work for <em>you</em>. We compare coverage across multiple carriers with no pressure and no bias. Just the right policy at the right price.</p>
+        </div>
+        <div class="mosaic__col">
+          <h3>Truly <br>local</h3>
+          <p>We know Montana's climate, lifestyle, and risks, because we live here too.</p>
+        </div>
+        <div class="mosaic__col">
+          <h3>Real people, <br>real help</h3>
+          <p>Call, email, or stop by. We're here to answer questions and make insurance actually make sense.</p>
+        </div>
+        <div class="mosaic__col">
+          <h3>Montana-specific <br>advice</h3>
+          <p>Hail, wind, wildlife collisions, gravel roads, seasonal toys. We know what actually gets claimed here, and we cover for it.</p>
+        </div>
+      </div>
+      <div class="mosaic__more">
+        <a href="about.html">Learn more about us &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently Asked <br>Questions</h2>
+      </div>
+      <div class="faq__list">
+        <div class="faq-item">
+          <button class="faq-item__q" type="button" aria-expanded="false">
+            Does it cost anything to get a quote?
+            <span class="faq-item__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-item__a"><div class="faq-item__a-inner">
+            No. Quotes are free and there's no obligation to switch. We're paid by the carrier when you buy a policy, so comparing your options costs you nothing either way.
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__q" type="button" aria-expanded="false">
+            I'm mid-policy. Can I still switch?
+            <span class="faq-item__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-item__a"><div class="faq-item__a-inner">
+            Almost always, yes. Most carriers refund the unused portion of your premium when you cancel early. We'll set your new policy to start on the right date so there's no gap in coverage. The cancellation itself has to come from you, directly with your current company.
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__q" type="button" aria-expanded="false">
+            Can you cancel my existing policy for me?
+            <span class="faq-item__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-item__a"><div class="faq-item__a-inner">
+            No, we cannot. Only you can cancel a policy with your current insurance company, so you'll need to contact them directly. We're glad to help you time it so your new coverage is already in place.
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__q" type="button" aria-expanded="false">
+            How much can I actually save by bundling?
+            <span class="faq-item__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-item__a"><div class="faq-item__a-inner">
+            It varies by carrier and by household, which is exactly why it's worth comparing. Putting home and auto with the same company is usually the single biggest discount available, and it's the first thing we check when we run your quote.
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__q" type="button" aria-expanded="false">
+            What do I need to have ready for a quote?
+            <span class="faq-item__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-item__a"><div class="faq-item__a-inner">
+            Your current declarations page is the most useful single document. It lists your coverages, limits, and deductibles. Otherwise, driver's license numbers, vehicle identification numbers, and your address are enough to get started.
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__q" type="button" aria-expanded="false">
+            Do you insure RVs, boats, ATVs, and collector cars?
+            <span class="faq-item__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-item__a"><div class="faq-item__a-inner">
+            Yes, along with motorcycles and snowmobiles. Montana toys are a big part of what we write, and we carry specialty carriers like Hagerty and Foremost specifically for them. <a href="coverage.html">See all coverage types.</a>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__q" type="button" aria-expanded="false">
+            Who do I call if I need to file a claim?
+            <span class="faq-item__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-item__a"><div class="faq-item__a-inner">
+            Your carrier's claims line is staffed 24/7 and is the fastest route. We keep the numbers listed on our <a href="contact.html">contact page</a>. If you're not sure who to call or what to say, call our office at (406) 652-9610 and we'll walk you through it.
+          </div></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -200,10 +399,10 @@
         <h4>Vehicles</h4>
         <ul>
           <li><a href="coverage.html">Auto Insurance</a></li>
-          <li><a href="coverage.html">Motorcycle Insurance</a></li>
+          <li><a href="coverage.html">Motorcycle &amp; ATV</a></li>
           <li><a href="coverage.html">RV Insurance</a></li>
           <li><a href="coverage.html">Boat &amp; Jet Ski</a></li>
-          <li><a href="coverage.html">ATV &amp; Snowmobile</a></li>
+          <li><a href="coverage.html">Snowmobile</a></li>
           <li><a href="coverage.html">Collector Car</a></li>
         </ul>
       </div>
@@ -221,17 +420,84 @@
       <div class="footer__col">
         <h4>Agency</h4>
         <ul>
+          <li><a href="team.html">Our Team</a></li>
           <li><a href="about.html">Why Choose Us</a></li>
-          <li><a href="about.html">Our Team</a></li>
           <li><a href="about.html">Our Carriers</a></li>
           <li><a href="contact.html">File a Claim</a></li>
           <li><a href="contact.html">Get a Quote</a></li>
         </ul>
       </div>
+      <div class="footer__col">
+        <h4>Montana</h4>
+        <ul>
+          <li><a href="billings.html">Billings Insurance</a></li>
+          <li><a href="missoula.html">Missoula Insurance</a></li>
+          <li><a href="butte.html">Butte Insurance</a></li>
+          <li><a href="great-falls.html">Great Falls Insurance</a></li>
+          <li><a href="helena.html">Helena Insurance</a></li>
+          <li><a href="bozeman.html">Bozeman Insurance</a></li>
+          <li><a href="belgrade.html">Belgrade Insurance</a></li>
+          <li><a href="kalispell.html">Kalispell Insurance</a></li>
+          <li><a href="sidney.html">Sidney Insurance</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer__bottom"><div class="container"><p>&copy; 2024 Conver &amp; Winchell Insurance. All rights reserved. &nbsp;|&nbsp; Billings, Montana</p></div></div>
+    <div class="footer__bottom"><div class="container"><p>&copy; 2026 Conver &amp; Winchell Insurance. All rights reserved. &nbsp;|&nbsp; Billings, Montana</p><p class="footer__credit">Billings skyline photo by <a href="https://commons.wikimedia.org/wiki/File:Billings,_Montana_skyline_in_2024.jpg" target="_blank" rel="noopener">Quintin Soloviev</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. &nbsp;|&nbsp; <a href="https://chasemclean.com/">A site by Chase McLean</a></p></div></div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <!-- STICKY MOBILE ACTION BAR -->
+  <div class="mobile-bar" id="mobileBar">
+    <a href="tel:4066529610" class="mobile-bar__call">
+      <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 8.91A16 16 0 0015 17.91l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Call Us
+    </a>
+    <a href="contact.html" class="mobile-bar__quote">Get a Quote</a>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "InsuranceAgency",
+    "name": "Conver & Winchell Insurance",
+    "url": "https://www.converwinchell.com/",
+    "image": "https://www.converwinchell.com/images/logo.jpg",
+    "telephone": "+1-406-652-9610",
+    "foundingDate": "2003",
+    "slogan": "Personal Service | Local Agent | Right Protection",
+    "areaServed": { "@type": "City", "name": "Billings", "addressRegion": "MT" },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2500 Grand Ave. Ste S",
+      "addressLocality": "Billings",
+      "addressRegion": "MT",
+      "postalCode": "59102",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:30",
+      "closes": "17:00"
+    }]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Does it cost anything to get a quote?", "acceptedAnswer": { "@type": "Answer", "text": "No. Quotes are free and there's no obligation to switch. We're paid by the carrier when you buy a policy, so comparing your options costs you nothing either way." } },
+      { "@type": "Question", "name": "I'm mid-policy. Can I still switch?", "acceptedAnswer": { "@type": "Answer", "text": "Almost always, yes. Most carriers refund the unused portion of your premium when you cancel early. We'll set your new policy to start on the right date so there's no gap in coverage. The cancellation itself has to come from you, directly with your current company." } },
+      { "@type": "Question", "name": "Can you cancel my existing policy for me?", "acceptedAnswer": { "@type": "Answer", "text": "No, we cannot. Only you can cancel a policy with your current insurance company, so you'll need to contact them directly. We're glad to help you time it so your new coverage is already in place." } },
+      { "@type": "Question", "name": "How much can I save by bundling home and auto?", "acceptedAnswer": { "@type": "Answer", "text": "It varies by carrier and by household, which is why it's worth comparing. Putting home and auto with the same company is usually the single biggest discount available, and it's the first thing we check when we run your quote." } },
+      { "@type": "Question", "name": "What do I need to have ready for a quote?", "acceptedAnswer": { "@type": "Answer", "text": "Your current declarations page is the most useful single document, since it lists your coverages, limits, and deductibles. Otherwise, driver's license numbers, vehicle identification numbers, and your address are enough to get started." } },
+      { "@type": "Question", "name": "Do you insure RVs, boats, ATVs, and collector cars?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, along with motorcycles and snowmobiles. We carry specialty carriers such as Hagerty and Foremost specifically for recreational vehicles." } },
+      { "@type": "Question", "name": "Who do I call to file a claim?", "acceptedAnswer": { "@type": "Answer", "text": "Your carrier's claims line is staffed 24/7 and is the fastest route; the numbers are listed on our contact page. If you're not sure who to call, call our office at (406) 652-9610 and we'll walk you through it." } }
+    ]
+  }
+  </script>
+
+  <script src="js/main.js?v=16"></script>
 </body>
 </html>

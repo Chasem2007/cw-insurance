@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /notion/
+
+Sitemap: https://www.converwinchell.com/sitemap.xml

@@ -1,11 +1,73 @@
 [build]
   publish = "."
 
-# Redirect everything to index.html for SPA-style routing (not strictly needed
-# for a static site, but good practice for future pages)
+# Pretty URLs — /team, /about, etc. resolve to their .html files.
+# (No SPA catch-all: this is a multi-page site and unknown paths should 404.)
+# Internal planning docs sit in the repo root, and publish = "." uploads the
+# whole root - so they have to be blocked at the edge, not just left unlinked.
 [[redirects]]
-  from   = "/*"
-  to     = "/index.html"
+  from   = "/notion/*"
+  to     = "/404.html"
+  status = 404
+  force  = true
+
+[[redirects]]
+  from   = "/team"
+  to     = "/team.html"
+  status = 200
+[[redirects]]
+  from   = "/about"
+  to     = "/about.html"
+  status = 200
+[[redirects]]
+  from   = "/coverage"
+  to     = "/coverage.html"
+  status = 200
+[[redirects]]
+  from   = "/contact"
+  to     = "/contact.html"
+  status = 200
+[[redirects]]
+  from   = "/quote"
+  to     = "/contact.html"
+  status = 200
+
+# Location pages
+[[redirects]]
+  from   = "/billings"
+  to     = "/billings.html"
+  status = 200
+[[redirects]]
+  from   = "/missoula"
+  to     = "/missoula.html"
+  status = 200
+[[redirects]]
+  from   = "/butte"
+  to     = "/butte.html"
+  status = 200
+[[redirects]]
+  from   = "/great-falls"
+  to     = "/great-falls.html"
+  status = 200
+[[redirects]]
+  from   = "/helena"
+  to     = "/helena.html"
+  status = 200
+[[redirects]]
+  from   = "/bozeman"
+  to     = "/bozeman.html"
+  status = 200
+[[redirects]]
+  from   = "/belgrade"
+  to     = "/belgrade.html"
+  status = 200
+[[redirects]]
+  from   = "/kalispell"
+  to     = "/kalispell.html"
+  status = 200
+[[redirects]]
+  from   = "/sidney"
+  to     = "/sidney.html"
   status = 200
 
 # Security headers
@@ -17,16 +79,30 @@
     Referrer-Policy        = "strict-origin-when-cross-origin"
     Permissions-Policy     = "camera=(), microphone=(), geolocation=()"
 
-# Cache static assets
+# CSS/JS use fixed filenames (no content hash), so they must revalidate.
+# "immutable" here would pin a stale stylesheet in browsers for a year.
+# Cache busting is done with the ?v= query on the <link>/<script> tags.
 [[headers]]
   for = "/css/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "/js/*"
   [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Self-hosted fonts never change in place.
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# Images are content-stable and safe to cache hard.
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
 
 # Netlify Forms notification (optional — configure in Netlify dashboard)
 # [build.environment]

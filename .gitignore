@@ -1,0 +1,8 @@
+# Local Netlify folder
+.netlify
+
+# macOS
+.DS_Store
+
+# Internal planning notes (blocked on the live site; keep out of the public repo)
+notion/
